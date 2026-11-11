@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ComputeController;
 use App\Http\Controllers\CreateController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -27,6 +28,10 @@ Route::get('/practice', [CreateController::class, 'practice']);
 
 Route::get('/calculate', [ComputeController::class, 'index']);
 Route::post('/calculate', [ComputeController::class, 'compute'])->name('calculate.submit');
+
+
+Route::get('/try', [UserController::class, 'addUser']);
+Route::get('/user/all', [UserController::class, 'getAllUser']);
 
 
 
