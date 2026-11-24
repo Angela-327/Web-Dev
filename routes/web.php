@@ -30,9 +30,9 @@ Route::get('/calculate', [ComputeController::class, 'index']);
 Route::post('/calculate', [ComputeController::class, 'compute'])->name('calculate.submit');
 
 
-Route::get('/try', [UserController::class, 'addUser']);
-Route::get('/user/all', [UserController::class, 'getAllUser']);
-
+Route::post('/users/add', [UserController::class, 'addUser'])->name('add');
+Route::get('/users/all', [UserController::class, 'getAllUser'])->name('users.list');
+Route::get('/users', [UserController::class, 'index'])
 
 
 
@@ -100,7 +100,7 @@ Route::group(['prefix' => 'user'], function(){
     ";
 }); */
 
-
+?>
 
 
 
